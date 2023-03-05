@@ -61,11 +61,22 @@ if __name__ == "__main__":
         p = sys.argv.index('-mass')
         m = int(sys.argv[p+1])
     if '-temp1' in sys.argv:
-        p = sys.argv.index('-temp1')
+
         T1 = int(sys.argv[p+1])
     if '-temp2' in sys.argv:
         p = sys.argv.index('-temp2')
         T2 = int(sys.argv[p+1])
+    if '-param' in sys.argv:
+        p = sys.argv.index('-param')
+        param = sys.argv[p+1]
+        parameters = []
+        alpha = 0,
+        beta = 0,
+        with open(param) as fp:
+            for line in fp:
+                line = float(line)
+                parameters.append(line)
+        alpha, beta, seed, T2 = parameters
     
     # exports inputs to a parameter file to be easily transfered for analysis in plot_MaxBoltz.py
     parameters = [seed, N, m, T1, T2] 
