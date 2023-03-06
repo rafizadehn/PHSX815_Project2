@@ -60,14 +60,20 @@ if __name__ == "__main__":
         p = sys.argv.index('-beta')
         beta = float(sys.argv[p+1])
 
+    # samples a temperature value from the inverse gamma 
+    # distribtion from a given seed value
     x = inv_gamma(alpha, beta, seed)
-        
+    
+    # puts the values used in the script into a single array 
+    # so it can then be exported to a text file
     param = [alpha, beta, seed, x]
 
+    # exports paramter array to text file
     with open(r'PriorParameters.txt', 'w') as fp:
         for item in param:
             fp.write("%s\n" % item)
     
+    # plot the inverse gamma distribution
     x_vals = np.linspace(275, 330, 1000)
     y_vals = invgamma.pdf(x_vals, alpha, loc = 275, scale = beta)
 
