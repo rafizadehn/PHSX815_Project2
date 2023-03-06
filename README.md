@@ -8,6 +8,8 @@ The temperature used in the data generation is randomly sampled from an inverse 
 $$f(y; \alpha, \beta) = \frac{1}{\Gamma (\alpha)} \frac{\beta^\alpha}{y^{\alpha+1}}e^{-\beta/y}$$
 where $\alpha$ and $\beta$ are the prior parameters that shape the overall distribution function of that the temeperature of a gas will be sampled. For values $\alpha=1$ and $\beta=5$ the distribution function has the form:
 
+![Figure_1](https://user-images.githubusercontent.com/76142511/223223167-a007785a-fccd-48d0-9de0-887f7eb851ae.png)
+
 To run the `PriorSampling.py` file, enter the follwing in the Linux terminal:
 
 > $ python3 PriorSampling.py
@@ -18,7 +20,7 @@ These values can be altered from the command line in the terminal by simply addi
 
 For example, it may looks something like this in linux:
 
-> $ python3 PriorSampling.py -alpha 1 -beta 2 -seed 5555
+> $ python3 PriorSampling.py -alpha 1 -beta 5 -seed 5555
 
 which would generate the values of $\alpha=1$, $\beta=5$, and the seed as 5555. The parameters chosen for this file are written to a text file called `PriorParameters.txt`. This allows for the Boltzmann distribution generation script to read the parameters that were used in the prior generation file for efficient sampling.
 
