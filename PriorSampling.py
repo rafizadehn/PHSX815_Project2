@@ -44,7 +44,7 @@ if __name__ == "__main__":
     alpha = 1
 
     # default beta
-    beta = 2
+    beta = 5
     
     # default seed
     seed = 5555
@@ -68,10 +68,10 @@ if __name__ == "__main__":
         for item in param:
             fp.write("%s\n" % item)
     
-    x_vals = np.linspace(275, 350, 1000)
+    x_vals = np.linspace(275, 330, 1000)
     y_vals = invgamma.pdf(x_vals, alpha, loc = 275, scale = beta)
 
-    plt.plot(x_vals, y_vals)
+    plt.plot(x_vals, y_vals, linewidth = 3)
     plt.tick_params(axis = 'both', labelsize = 13)
     plt.xlabel('Temperature (K)', fontsize = 15)
     plt.ylabel('Probability Density', fontsize = 15)
