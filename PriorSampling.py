@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.special import erf
 from scipy.interpolate import interp1d as interp
+from scipy.stats import invgamma
 
 # import our Random class from Random.py file
 sys.path.append(".")
@@ -29,7 +30,7 @@ def velocities(n, seed):
     vel = inv_cdf(vals)
     return vel
 
-def invgamma(alpha, beta, seed):
+def inv_gamma(alpha, beta, seed):
     np.random.seed(seed)
     return 1 / np.random.gamma(alpha, 1 / beta) + 275
 
@@ -48,22 +49,32 @@ if __name__ == "__main__":
     # default seed
     seed = 5555
  
-    
     # read the user-provided inputs from the command line (if there)
     if '-seed' in sys.argv:
         p = sys.argv.index('-seed')
         seed = int(sys.argv[p+1])
     if '-alpha' in sys.argv:
         p = sys.argv.index('-alpha')
-        alpha = int(sys.argv[p+1])
+        alpha = float(sys.argv[p+1])
     if '-beta' in sys.argv:
         p = sys.argv.index('-beta')
-        beta = int(sys.argv[p+1])
+        beta = float(sys.argv[p+1])
 
-    x = invgamma(alpha, beta, seed)
+    x = inv_gamma(alpha, beta, seed)
         
     param = [alpha, beta, seed, x]
 
     with open(r'PriorParameters.txt', 'w') as fp:
         for item in param:
             fp.write("%s\n" % item)
+    
+    x_vals = np.linspace(275, 350, 1000)
+    y_vals = invgamma.pdf(x_vals, alpha, loc = 275, scale = beta)
+
+    plt.plot(x_vals, y_vals)
+    plt.tick_params(axis = 'both', labelsize = 13)
+    plt.xlabel('Temperature (K)', fontsize = 15)
+    plt.ylabel('Probability Density', fontsize = 15)
+    ## title in case you want it
+    plt.title('Prior Distribution Function', fontsize = 15, fontweight = 'bold')
+    plt.show()
