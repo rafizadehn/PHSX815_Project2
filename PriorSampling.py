@@ -32,7 +32,7 @@ def velocities(n, seed):
 
 def inv_gamma(alpha, beta, seed):
     np.random.seed(seed)
-    return 1 / np.random.gamma(alpha, 1 / beta) + 275
+    return (1 / np.random.gamma(alpha, 1 / beta)) + 275
 
 if __name__ == "__main__":
     if '-h' in sys.argv or '--help' in sys.argv:
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     with open(r'PriorParameters.txt', 'w') as fp:
         for item in param:
             fp.write("%s\n" % item)
-    
+    print(x)
     # plot the inverse gamma distribution
     x_vals = np.linspace(275, 330, 1000)
     y_vals = invgamma.pdf(x_vals, alpha, loc = 275, scale = beta)
