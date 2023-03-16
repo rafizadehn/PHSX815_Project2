@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.special import erf
 from scipy.interpolate import interp1d as interp
 from scipy.stats import invgamma
+from scipy.special import gamma, gammainc
 
 # import our Random class from Random.py file
 sys.path.append(".")
@@ -30,9 +31,9 @@ def velocities(n, seed):
     vel = inv_cdf(vals)
     return vel
 
-def inv_gamma(alpha, beta, seed):
+def inv_gamma(x, alpha, beta, seed):
     np.random.seed(seed)
-    return (1 / np.random.gamma(alpha, 1 / beta)) + 275
+    return (beta ** alpha) / (gamma(alpha)) * (1/(x**alpha)) * np.exp(-beta/x)
 
 if __name__ == "__main__":
     if '-h' in sys.argv or '--help' in sys.argv:
@@ -44,10 +45,13 @@ if __name__ == "__main__":
     alpha = 1
 
     # default beta
-    beta = 5
+    beta = 2
     
     # default seed
-    seed = 5555
+    seed = 4836
+
+    # default sample size
+    Nsamp = 10000
  
     # read the user-provided inputs from the command line (if there)
     if '-seed' in sys.argv:
@@ -61,26 +65,28 @@ if __name__ == "__main__":
         beta = float(sys.argv[p+1])
 
     # samples a temperature value from the inverse gamma 
-    # distribtion from a given seed value
-    x = inv_gamma(alpha, beta, seed)
+    # distribution from a given seed value
+    x_shift = 275
+    x_values = np.linspace(x_shift+0.1, x_shift + 75, 1000)
+
+    y_values = inv_gamma(x_values - x_shift, alpha, beta, seed)
     
+
+    rng = np.random.default_rng(seed)
+
+    # plot the inverse gamma distribution
+    plt.plot(x_values, y_values)
+    plt.xlabel('Temperature (K)')
+    plt.ylabel('Probability Density Function')
+    plt.title('Inverse Gamma Function (alpha={}, beta={})'.format(float(alpha),float(beta)), fontweight = 'bold')
+    plt.show()
+
     # puts the values used in the script into a single array 
     # so it can then be exported to a text file
-    param = [alpha, beta, seed, x]
+    param = [alpha, beta, seed, rng.uniform(x_shift, x_shift+75)]
 
     # exports paramter array to text file
     with open(r'PriorParameters.txt', 'w') as fp:
         for item in param:
             fp.write("%s\n" % item)
-    print(x)
-    # plot the inverse gamma distribution
-    x_vals = np.linspace(275, 330, 1000)
-    y_vals = invgamma.pdf(x_vals, alpha, loc = 275, scale = beta)
-
-    plt.plot(x_vals, y_vals, linewidth = 3)
-    plt.tick_params(axis = 'both', labelsize = 13)
-    plt.xlabel('Temperature (K)', fontsize = 15)
-    plt.ylabel('Probability Density', fontsize = 15)
-    ## title in case you want it
-    plt.title('Prior Distribution Function', fontsize = 15, fontweight = 'bold')
-    plt.show()
+    
