@@ -129,12 +129,20 @@ where $\alpha$ and $\beta$ are predetermined prior values and $y$ represents the
 From the \lstinline{PriorSampling.py},
 
 \begin{lstlisting}
-def inv_gamma(alpha, beta, seed):
+def inv_gamma(x, alpha, beta, seed):
     np.random.seed(seed)
-    return 1 / np.random.gamma(alpha, 1 / beta) + 275
+    y = (beta ** alpha) / (gamma(alpha)) * (1/(x**alpha)) * np.exp(-beta/x)
+    return
 \end{lstlisting}
 
-This listing uses inputs of $\alpha$ and $\beta$, which are predetermined prior values, to generate the inverse gamma distribution using the numpy gamma command. The value of 275 is added as a baseline for the values to begin at 275 K, otherwise the function naturally begins at 0 K. 
+This listing uses inputs of $\alpha$ and $\beta$, which are predetermined prior values, to generate the inverse gamma distribution using the numpy gamma command. The distribution from the script is graphed and shown in Fig. below. 
+
+
+\begin{figure}[h]
+	\caption{Inverse gamma distribution.}
+	\centering
+	\includegraphics[scale=0.51]{inv_gamma.png}
+\end{figure}
 
 
 The plots in Fig. 1 are idealized curves that are plotted directly from the M-B distribution equation. To simulate a real experiment sampling gas particles, a random number generator is used in conjunction with the M-B equation and plotted as a histogram shown in Fig. 2. This is done by defining functions in python to return values of the M-B distribution, and also its inverse as shown in the listing below. From the \lstinline{rng_MaxBoltz.py} file,
@@ -188,12 +196,12 @@ This section of code uses a python package named \lstinline{statsmodels} to calc
 
 \section{Results and Analysis}
 
-The results of this method are shown in Fig. 3 for 320 K, but also for other temperatures in the range of 290-330 K.
+The results of this method are shown in Fig. 3 for the randomly sampled temperature from the inverse gamma distribution.
 
 \begin{figure}[h]
 	\caption{Statistical power plotted as a function of sample size. Values calculated with an $\alpha = 0.05$ value, and a molecular mass of 85 amu.}
 	\centering
-	\includegraphics[scale=0.51]{results1.png}
+	\includegraphics[scale=0.41]{results1.png}
 \end{figure}
 
 The different temperatures in Fig.\ 3 show the difference in statistical power per sample size in comparison to the other temperatures. Statisticians generally regard 0.8 to be a statistical power significant enough to consider two distributions resolvable. Since the apartment tenant is trying to resolve a temperature of 320 K, they would need to sample roughly 250 particles before reaching the 80\% confidence level.
@@ -220,14 +228,6 @@ I would like to thank Prof.\ Chris Rogan for his continued support in the course
 All python scripts and data generated are contained in \href{https://github.com/rafizadehn/PHSX815_Project2}{\textcolor{blue}{Neema Rafizadeh's GitHub repository for this project}}. Instructions for running the scripts and changing the inputs are listed on the README.md file listed in that repository. 
 
 The \lstinline{MySort} and \lstinline{Random} classes of functions can be located at \href{https://github.com/crogan/PHSX815_Week2}{\textcolor{blue}{Prof.\ Christopher Rogan's GitHub}}. The information regarding the Maxwell-Boltzmann distribution was sourced from the \href{https://en.wikipedia.org/wiki/Maxwell%E2%80%93Boltzmann_distribution}{\textcolor{blue}{Wikipedia article discussing the subject.}} The calculation of the statistical power was done with the \lstinline{statsmodels} package in python, with the \href{https://www.statsmodels.org/dev/generated/statsmodels.stats.power.tt_ind_solve_power.html}{\textcolor{blue}{docuentation provided here}}. 
-
-\section{Histogram of Particle Velocities at Simulated Scenario's Temperatures}
-
-\begin{figure}[h]
-	\caption{Probability density for gas particle velocity at differing temperatures, 275 k and 320 K. Values taken for a gas with an 85 amu molecular mass. }	
-	\centering
-	\includegraphics[scale=0.5]{appendix2.png}
-\end{figure}
 
 % The \nocite command causes all entries in a bibliography to be printed out
 % whether or not they are actually referenced in the text. This is appropriate

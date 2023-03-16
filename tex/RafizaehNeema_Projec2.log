@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.19)  6 MAR 2023 22:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.19)  15 MAR 2023 21:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**RafizadehNeema_Project1.tex
-(./RafizadehNeema_Project1.tex
+**RafizaehNeema_Projec2.tex
+(./RafizaehNeema_Projec2.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/revtex/revtex4-2.cls
@@ -480,8 +480,8 @@ Class revtex4-2 Warning: Failed to patch the float package.
 Class revtex4-2 Info: cite was not loaded (OK!) on input line 69.
 Class revtex4-2 Info: mcite was not loaded (OK!) on input line 69.
 Class revtex4-2 Info: multicol was not loaded (OK!) on input line 69.
-(./RafizadehNeema_Project1.aux)
-\openout1 = `RafizadehNeema_Project1.aux'.
+(./RafizaehNeema_Projec2.aux)
+\openout1 = `RafizaehNeema_Projec2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
@@ -541,9 +541,9 @@ LaTeX Info: Redefining \ref on input line 69.
 LaTeX Info: Redefining \pageref on input line 69.
 LaTeX Info: Redefining \nameref on input line 69.
 
-(./RafizadehNeema_Project1.out) (./RafizadehNeema_Project1.out)
+(./RafizaehNeema_Projec2.out) (./RafizaehNeema_Projec2.out)
 \@outlinefile=\write4
-\openout4 = `RafizadehNeema_Project1.out'.
+\openout4 = `RafizaehNeema_Projec2.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -561,7 +561,7 @@ Package gensymb Warning: Not defining \micro.
 
 \c@lstlisting=\count315
 Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 69.
-\openout3 = `RafizadehNeema_Project1Notes.bib'.
+\openout3 = `RafizaehNeema_Projec2Notes.bib'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -588,68 +588,86 @@ File: hypothesis1.png Graphic file (type png)
 Package pdftex.def Info: hypothesis1.png  used on input line 117.
 (pdftex.def)             Requested size: 217.08897pt x 202.71466pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./hypothesis1.png>]
-<code1.png, id=69, 419.8887pt x 390.9807pt>
+<inv_gamma.png, id=69, 462.528pt x 346.896pt>
+File: inv_gamma.png Graphic file (type png)
+<use inv_gamma.png>
+Package pdftex.def Info: inv_gamma.png  used on input line 144.
+(pdftex.def)             Requested size: 235.88615pt x 176.91461pt.
+<code1.png, id=70, 419.8887pt x 390.9807pt>
 File: code1.png Graphic file (type png)
 <use code1.png>
-Package pdftex.def Info: code1.png  used on input line 171.
+Package pdftex.def Info: code1.png  used on input line 179.
 (pdftex.def)             Requested size: 214.1404pt x 199.3975pt.
 
-[2 <./code1.png>]
-Overfull \hbox (8.82965pt too wide) in paragraph at lines 183--184
+[2 <./inv_gamma.png> <./code1.png>]
+Overfull \hbox (8.82965pt too wide) in paragraph at lines 191--192
 [][][][][][][][][][][][][][][][][][]  
  []
 
-<results1.png, id=100, 421.3341pt x 399.6531pt>
+<results1.png, id=104, 606.3453pt x 476.2593pt>
 File: results1.png Graphic file (type png)
 <use results1.png>
-Package pdftex.def Info: results1.png  used on input line 196.
-(pdftex.def)             Requested size: 214.87755pt x 203.82037pt.
-[3 <./results1.png>]
-<appendix2.png, id=121, 430.0065pt x 390.258pt>
-File: appendix2.png Graphic file (type png)
-<use appendix2.png>
-Package pdftex.def Info: appendix2.png  used on input line 229.
-(pdftex.def)             Requested size: 215.00272pt x 195.12851pt.
+Package pdftex.def Info: results1.png  used on input line 204.
+(pdftex.def)             Requested size: 248.60318pt x 195.26756pt.
 
-No file RafizadehNeema_Project1.bbl.
+Overfull \hbox (2.60318pt too wide) in paragraph at lines 204--205
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./results1.png>]
+No file RafizaehNeema_Projec2.bbl.
 
 Class revtex4-2 Warning: Environment acknowledgements is obsolete;
 Use acknowledgments instead.
 
-[4 <./appendix2.png>] (./RafizadehNeema_Project1.aux)
-Package rerunfilecheck Info: File `RafizadehNeema_Project1.out' has not changed
-.
-(rerunfilecheck)             Checksum: 1A9BB57C6F66E8BB544FE2CDB8B6FAA2;2220.
+[4] (./RafizaehNeema_Projec2.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `RafizaehNeema_Projec2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `RafizaehNeema_Projec2.out':
+(rerunfilecheck)             Before: 1A9BB57C6F66E8BB544FE2CDB8B6FAA2;2220
+(rerunfilecheck)             After:  2852D3C8906592E523588207C5D7BE7E;1798.
  ) 
 Here is how much of TeX's memory you used:
- 15352 strings out of 478287
- 236934 string characters out of 5849289
- 861180 words of memory out of 5000000
- 33286 multiletter control sequences out of 15000+600000
+ 15356 strings out of 478287
+ 236928 string characters out of 5849289
+ 869176 words of memory out of 5000000
+ 33289 multiletter control sequences out of 15000+600000
  482593 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,8n,77p,1130b,1200s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on RafizadehNeema_Project1.pdf (4 pages, 412537 bytes).
+ 69i,8n,77p,1128b,1200s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section*.10} has been referenced but does not exi
+st, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt9.pfb>
+Output written on RafizaehNeema_Projec2.pdf (4 pages, 363344 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
